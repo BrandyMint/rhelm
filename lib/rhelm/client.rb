@@ -15,7 +15,7 @@ module Rhelm
 
     def initialize(program: "helm", logger: nil, **default_options)
       @program = program
-      @logger ||= SimpleLogger.new
+      @logger = logger || SimpleLogger.new
       @default_options = default_options || {}
     end
 
